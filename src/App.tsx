@@ -44,39 +44,40 @@ function App() {
   const [pagamento, setPagamento] = useState<PagamentoType[]>([])
   const [estoque, setEstoque] = useState<EstoqueType[]>([])
   const [promocoes, setPromocoes] = useState<PromocoesType[]>([])
-  //useEffect(O Que fazer, Quando fazer)
+
   useEffect(()=>{
-    fetch("http://localhost:8000/produtos")
+    fetch("https://one022b-cacaushow-trabalho-1r6f.onrender.com/chocolates")
     .then(resposta=>resposta.json())
     .then(dados=>setChocolates(dados))
   },[]); 
 
   useEffect(()=>{
-    fetch("https://one022b-marketplace-b55e.onrender.com/usuarios")
+    fetch("https://one022b-cacaushow-trabalho-1r6f.onrender.com/cliente")
     .then(resposta=>resposta.json())
     .then(dados=>setCliente(dados))
   },[])
 
   useEffect(()=>{
-    fetch("https://one022b-marketplace-b55e.onrender.com/usuarios")
+    fetch("https://one022b-cacaushow-trabalho-1r6f.onrender.com/pagamento")
     .then(resposta=>resposta.json())
     .then(dados=>setPagamento(dados))
   },[])
 
   useEffect(()=>{
-    fetch("https://one022b-marketplace-b55e.onrender.com/usuarios")
+    fetch("https://one022b-cacaushow-trabalho-1r6f.onrender.com/estoque")
     .then(resposta=>resposta.json())
     .then(dados=>setEstoque(dados))
   },[])
 
   useEffect(()=>{
-    fetch("https://one022b-marketplace-b55e.onrender.com/usuarios")
+    fetch("https://one022b-cacaushow-trabalho-1r6f.onrender.com/promocoes")
     .then(resposta=>resposta.json())
     .then(dados=>setPromocoes(dados))
   },[])
 
   return (
     <>
+    <Link to={"/chocolates"}>Chocolates</Link>
     <Link to={"/cadastro-chocolate"}>Link Cadastro Chocolate</Link>
     <div className="coitaner-chocolates">
     {chocolates.map(choco=>{

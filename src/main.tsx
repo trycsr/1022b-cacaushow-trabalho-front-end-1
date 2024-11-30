@@ -8,45 +8,42 @@ import {
 } from "react-router-dom";
 import CadastroChocolate from './componentes/cadastrochocolate/CadastroChocolate.tsx';
 import CadastroCliente from './componentes/cadastrocliente/CadastroCliente.tsx';
-import ControleEstoque from './componentes/cadastroestoque/CadastroEstoque.tsx';
-import ListagemPromocoes from './componentes/cadastropromocoes/CadastroPromocoes.tsx';
-import RegistroPagamento from './componentes/cadastropagamento/CadastroPagamento.tsx';
-import ListaChocolate from './componentes/listagemchocolate/lista-chocolate.tsx';
+import CadastroPagamento from './componentes/cadastropagamento/CadastroPagamento.tsx';
+import CriacaoPromocoes from './componentes/cadastropromocoes/CadastroPromocoes.tsx';
+import GestaoEstoque from './componentes/gestaoestoque/GestãoEstoque.tsx';
+import Header from './componentes/header.tsx';
+import Footer from './componentes/footer.tsx'
+
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <><Header/> <App /> <Footer/></>,
   },
   {
     path: "/cadastro-chocolate",
-    element: <CadastroChocolate/>,
+    element:  <CadastroChocolate/>,
   },
   {
     path: "/cadastro-cliente",
-    element: <CadastroCliente/>,
+    element:  <CadastroCliente/>,
   },
   {
-    path: "/controle-estoque",
-    element: <ControleEstoque/>,
+    path: "/cadastro-pagamento",
+    element: <CadastroPagamento/>,
   },
   {
-    path: "/listagem-promocoes",
-    element: <ListagemPromocoes/>,
+    path: "/criacao-promocoes",
+    element: <CriacaoPromocoes/>,
   },
   {
-    path: "/registro-pagamento",
-    element: <RegistroPagamento/>,
-  },
-  {
-    path: "/chocolates",
-    element: <ListaChocolate/>,
+    path: "/gestao-estoque",
+    element: <GestaoEstoque/>,
   },
 ]);
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-
     <RouterProvider router={router} />
   </StrictMode>,
 )

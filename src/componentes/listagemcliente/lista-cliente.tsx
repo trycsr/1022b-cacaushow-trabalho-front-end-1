@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react'
+import {Link} from "react-router-dom"
+
 type ClienteType = {
     clienteId:number,
     nome:string,
@@ -8,20 +10,21 @@ export default function ListaCliente() {
     
     const [cliente, setCliente] = useState<ClienteType[]>([])
     useEffect(()=>{
-        fetch("https://one022b-cacaushow-trabalho-1r6f.onrender.com/cliente")
-        .then(resposta=>resposta.json())
-        .then(dados=>setCliente(dados))
-      },[])
+      fetch("https://one022b-cacaushow-trabalho-1r6f.onrender.com/cliente")
+      .then(resposta=>resposta.json())
+      .then(dados=>setCliente(dados))
+    },[])
     return (
         <>
-            {cliente.map(clien => {
-                return (
-                    <div key={clien.clienteId}className='cliente-item'>
-                    <h1>{clien.nome}</h1>
-                    <p>{clien.cpf}</p>
-                  </div>
-                )
-            })}
+    <Link to={"/cadastro-cliente"}>Link Cadastro Cliente</Link>
+      {cliente.map(clien=>{
+        return(
+          <div key={clien.clienteId}className='cliente-item'>
+            <h1>{clien.nome}</h1>
+            <p>{clien.cpf}</p>
+          </div>
+        )
+      })}
         </>
     )
 }

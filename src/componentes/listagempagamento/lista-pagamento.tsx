@@ -16,7 +16,7 @@ type PagamentoType = {
       },[])
       return (
         <>
-        <Link to={"/cadastro-pagamento"}>Link Cadastro Pagamentos</Link>
+        <Link to={"/cadastro-pagamento"}>Pagamentos</Link>
             {pagamento.map(paga => {
                 return (
                     <div key={paga.Idpagamento}className='pagamento-item'>

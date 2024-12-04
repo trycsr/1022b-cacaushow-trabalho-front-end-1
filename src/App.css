@@ -5,12 +5,12 @@
 }
 
 body {
-  background-color: #6b2c16c5;
+  background-color: #a3451cda;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 header, footer {
-  background: #27120e;
+  background: #33150f;
   color: rgb(235, 143, 6);
   display: flex;
   justify-content: center;
@@ -27,7 +27,7 @@ header {
 
 footer {
   bottom: 0;
-  background: #27120e;
+  background: #33150f;
 }
 
 #root {

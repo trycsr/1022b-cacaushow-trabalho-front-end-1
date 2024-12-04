@@ -19,7 +19,8 @@ export default function CadastroChocolate(){
             preco: preco,
             imagem: imagem
         }
-        fetch("http://localhost:8000/chocolates",{
+        console.log(chocolate)
+        fetch("https://one022b-cacaushow-trabalho-1r6f.onrender.com/chocolates",{
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -53,7 +54,7 @@ export default function CadastroChocolate(){
 
     return(
         <>
-            <h1>Tela Cadastro Chocolates</h1>
+            <h1>Cadastrar Chocolates</h1>
             <form onSubmit={handleForm}>
                 <div>
                     <label htmlFor="id">ID: </label>

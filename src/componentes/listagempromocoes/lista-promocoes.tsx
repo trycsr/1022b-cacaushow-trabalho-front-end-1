@@ -5,7 +5,7 @@ type PromocoesType = {
     idpromocao:number,
     titulo:string,
     descricao:string,
-    validade:Date,
+    validade:string,
     cupom:string
   }
 export default function ListaPromocoes() {
@@ -24,7 +24,7 @@ export default function ListaPromocoes() {
                     <div key={promo.idpromocao}className='promocoes-item'>
                     <h1>{promo.titulo}</h1>
                     <p>{promo.descricao}</p>
-                    {/* <p>{promo.validade.getDate()}</p> */}
+                    <p>{new Date(promo.validade).getDate()+1}/{new Date(promo.validade).getMonth()+1}/{new Date(promo.validade).getFullYear()}</p>
                     <p>{promo.cupom}</p>
                   </div>
                 )

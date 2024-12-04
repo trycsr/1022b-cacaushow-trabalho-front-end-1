@@ -10,7 +10,7 @@ type PagamentoType = {
  export default function ListaPagamento() {
     const [pagamento, setPagamento] = useState<PagamentoType[]>([])
     useEffect(()=>{
-        fetch("https://one022b-cacaushow-trabalho.onrender.com/pagamento")
+        fetch("https://one022b-cacaushow-trabalho-1r6f.onrender.com/pagamento")
         .then(resposta=>resposta.json())
         .then(dados=>setPagamento(dados))
       },[])

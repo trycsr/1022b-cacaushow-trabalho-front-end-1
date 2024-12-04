@@ -1,14 +1,14 @@
 import { FormEvent, useState, ChangeEvent } from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function CadastroPagamento(){
+export default function CadastroPagamento() {
     const navigate = useNavigate();
-    const [idpagamento,setIdpagamento] = useState("")
-    const [formapag,setFormapag] = useState("")
-    const [descricao,setDescricao] = useState("")
-    const [valor,setValor] = useState("")
+    const [idpagamento, setIdpagamento] = useState("")
+    const [formapag, setFormapag] = useState("")
+    const [descricao, setDescricao] = useState("")
+    const [valor, setValor] = useState("")
 
-    function handleForm(event:FormEvent){
+    function handleForm(event: FormEvent) {
         event.preventDefault();
         console.log("Tentei cadastrar pagamentos");
         const pagamento = {
@@ -17,35 +17,36 @@ export default function CadastroPagamento(){
             descricao: descricao,
             valor: valor
         }
-        fetch("https://one022b-cacaushow-trabalho-1r6f.onrender.com/pagamento",{
+        console.log(pagamento)
+        fetch("https://one022b-cacaushow-trabalho-1r6f.onrender.com/pagamento", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify(pagamento)
         }).then(response => {
-            if(response.status === 200){
+            if (response.status === 200) {
                 alert("Pagamento cadastrado com sucesso")
-                navigate("/")
+                navigate("/lista-pagamento")
             }
-            else{
+            else {
                 alert("Erro ao cadastrar pagamento")
             }
         })
     }
-    function handleIdpagamento(event:ChangeEvent<HTMLInputElement>){
+    function handleIdpagamento(event: ChangeEvent<HTMLInputElement>) {
         setIdpagamento(event.target.value)
     }
-    function handleFormapag(event:ChangeEvent<HTMLInputElement>){
+    function handleFormapag(event: ChangeEvent<HTMLSelectElement>) {
         setFormapag(event.target.value)
     }
-    function handleDescricao(event:ChangeEvent<HTMLInputElement>){
+    function handleDescricao(event: ChangeEvent<HTMLInputElement>) {
         setDescricao(event.target.value)
     }
-    function handleValor(event:ChangeEvent<HTMLInputElement>){
+    function handleValor(event: ChangeEvent<HTMLInputElement>) {
         setValor(event.target.value)
     }
-    return(
+    return (
         <>
             <h1>Registrar Pagamento</h1>
             <form onSubmit={handleForm}>
@@ -55,18 +56,23 @@ export default function CadastroPagamento(){
                 </div>
                 <div>
                     <label htmlFor="formapag">Forma de Pagamento: </label>
-                    <input type="text" name="formapag" onChange={handleFormapag} />
+                    <select name="formapag" onChange={handleFormapag}>
+                        <option value="dinheiro">Dinheiro</option>
+                        <option value="debito">Débito</option>
+                        <option value="credito">Crédito</option>
+                        <option value="pix">Pix</option>
+                    </select>
                 </div>
                 <div>
                     <label htmlFor="descricao">Descrição: </label>
                     <input type="text" name="descricao" onChange={handleDescricao} />
                 </div>
                 <div>
-                <label htmlFor="valor">Valor: </label>
-                <input type="text" name="valor" onChange={handleValor} />
+                    <label htmlFor="valor">Valor: </label>
+                    <input type="text" name="valor" onChange={handleValor} />
                 </div>
                 <div>
-                    <input type="submit" value="Cadastrar"/>
+                    <input type="submit" value="Cadastrar" />
                 </div>
             </form>
         </>

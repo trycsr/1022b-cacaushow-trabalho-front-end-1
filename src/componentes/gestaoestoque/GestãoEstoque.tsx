@@ -26,7 +26,7 @@ export default function GestaoEstoque (){
         }).then(response => {
             if(response.status === 200){
                 alert("Estoque atualizado com sucesso")
-                navigate("/")
+                navigate("/lista-estoque")
             }
             else{
                 alert("Erro ao atualizar o Estoque")
@@ -48,7 +48,7 @@ export default function GestaoEstoque (){
 
     return(
         <>
-        <h1>Atualizar Estoqueue</h1>
+        <h1>Atualizar Estoque</h1>
         <form onSubmit={handleForm}>
             <div>
                 <label htmlFor="itemid">Item ID: </label>

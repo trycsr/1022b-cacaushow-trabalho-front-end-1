@@ -15,11 +15,11 @@
 
 a {
   font-weight: 500;
-  color: rgb(255, 150, 64);
+  color: white;
   text-decoration: inherit;
 }
 a:hover {
-  color: brown;
+  color: rgb(235, 143, 6); 
 }
 
 body {
@@ -68,5 +68,5 @@ button:focus-visible {
 }
 
 img{
-  width: 300px;
+  width: 350px;
 }

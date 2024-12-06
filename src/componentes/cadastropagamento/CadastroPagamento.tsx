@@ -57,10 +57,10 @@ export default function CadastroPagamento() {
                 <div>
                     <label htmlFor="formapag">Forma de Pagamento: </label>
                     <select name="formapag" onChange={handleFormapag}>
-                        <option value="dinheiro">Dinheiro</option>
-                        <option value="debito">Débito</option>
-                        <option value="credito">Crédito</option>
-                        <option value="pix">Pix</option>
+                        <option value="Dinheiro">Dinheiro</option>
+                        <option value="Debito">Débito</option>
+                        <option value="Credito">Crédito</option>
+                        <option value="Pix">Pix</option>
                     </select>
                 </div>
                 <div>

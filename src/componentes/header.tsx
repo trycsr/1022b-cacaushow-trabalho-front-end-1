@@ -5,7 +5,7 @@ export default function Header() {
         <>
             <header>
                 <h1>
-                    <Link to="/">CacauShow</Link>
+                    <Link to="/">CacauShow ★ </Link>
                     </h1>
                 <nav>
                     <ul>

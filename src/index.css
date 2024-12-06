@@ -15,11 +15,11 @@
 
 a {
   font-weight: 500;
-  color: white;
+  color: #eb8f06;
   text-decoration: inherit;
 }
 a:hover {
-  color: rgb(235, 143, 6); 
+  color: #eb8f06; 
 }
 
 body {

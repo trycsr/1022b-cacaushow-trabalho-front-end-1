@@ -10,7 +10,6 @@ import CadastroChocolate from './componentes/cadastrochocolate/CadastroChocolate
 import CadastroCliente from './componentes/cadastrocliente/CadastroCliente.tsx';
 import CadastroPagamento from './componentes/cadastropagamento/CadastroPagamento.tsx';
 import CriacaoPromocoes from './componentes/criacaopromocoes/CriacaoPromocoes.tsx';
-import GestaoEstoque from './componentes/gestaoestoque/GestãoEstoque.tsx';
 import Header from './componentes/header.tsx';
 import Footer from './componentes/footer.tsx';
 import ListaChocolate from './componentes/listagemchocolate/lista-chocolate.tsx';
@@ -18,6 +17,7 @@ import ListaCliente from './componentes/listagemcliente/lista-cliente.tsx';
 import ListaPagamento from './componentes/listagempagamento/lista-pagamento.tsx';
 import ListaPromocoes from './componentes/listagempromocoes/lista-promocoes.tsx';
 import ListaEstoque from './componentes/listagemestoque/lista-estoque.tsx';
+import GestaoEstoque from './componentes/gestaoestoque/GestãoEstoque.tsx';
 import AlterarChocolate from './componentes/alterarchocolate/AlterarChocolate.tsx';
 import AlterarCliente from './componentes/alterarcliente/AlterarCliente.tsx';
 import AlterarEstoque from './componentes/alterarestoque/AlterarEstoque.tsx';

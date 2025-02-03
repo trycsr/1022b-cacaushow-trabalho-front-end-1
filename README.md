@@ -15,6 +15,7 @@ Escolhemos este tema porque a marca é bem conhecida e todo mundo gosta. No noss
 Clone o projeto
 
 ```bash
+
   Clone do GitHub (Front-End): https://github.com/trycsr/1022b-cacaushow-trabalho-front-end.git 
   Clone do GitHub (Back-End): https://github.com/trycsr/1022b-cacaushow-trabalho.git
 ```
@@ -37,3 +38,7 @@ Inicie o servidor
 ```bash
   npm run dev
 ```
+
+# Link da Vercel
+
+https://1022b-cacaushow-trabalho-front-end-two.vercel.app/

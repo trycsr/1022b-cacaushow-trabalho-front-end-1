@@ -11,13 +11,16 @@ export default function ListaEstoque() {
     
     const [estoque, setEstoque] = useState<EstoqueType[]>([])
     useEffect(()=>{
-        fetch("https://one022b-cacaushow-trabalho-1r6f.onrender.com/estoque")
+        fetch("https://one022b-cacaushow-trabalho-ixsq.onrender.com/estoque")
         .then(resposta=>resposta.json())
         .then(dados=>setEstoque(dados))
       },[])
     return (
         <>
-         <Link to={"/gestao-estoque"}>Estoque</Link>
+         <div className='container-link'>
+        <Link to={"/gestao-estoque"} className="link-bonitao">Estoque</Link>
+        <Link to={"/alterar-estoque"} className="link-bonitao">Atualizar Estoque</Link>
+        </div>
             {estoque.map(esto => {
                 return (
                     <div key={esto.itemId}className='estoque-item'>
@@ -30,4 +33,3 @@ export default function ListaEstoque() {
         </>
     )
 }
-

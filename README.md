@@ -15,8 +15,8 @@ Escolhemos este tema porque a marca é bem conhecida e todo mundo gosta. No noss
 Clone o projeto
 
 ```bash
-  Clone do GitHub (Front-End): https://github.com/vitoriasiqueira/1022b-cacaushow-trabalho-front-end.git 
-  Clone do GitHub (Back-End): https://github.com/vitoriasiqueira/1022b-cacaushow-trabalho.git
+  Clone do GitHub (Front-End): https://github.com/trycsr/1022b-cacaushow-trabalho-front-end.git 
+  Clone do GitHub (Back-End): https://github.com/trycsr/1022b-cacaushow-trabalho.git
 ```
 
 Entre no diretório do projeto

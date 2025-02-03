@@ -1,5 +1,5 @@
 import { ChangeEvent, FormEvent, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function CadastroCliente (){
     const navigate = useNavigate();
@@ -15,7 +15,7 @@ export default function CadastroCliente (){
             nome: nome,
             cpf: cpf
         }
-        fetch("https://one022b-cacaushow-trabalho-1r6f.onrender.com/cliente",{
+        fetch("https://one022b-cacaushow-trabalho-ixsq.onrender.com/cliente",{
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -43,6 +43,9 @@ export default function CadastroCliente (){
 
     return(
         <>
+        <div className='container-link'>
+        <Link to={"/alterar-cliente"} className="link-bonitao">Alterar Cliente</Link>
+        </div>
         <h1>Cadastrar Cliente</h1>
         <form onSubmit={handleForm}>
             <div>

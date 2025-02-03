@@ -26,5 +26,9 @@
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.0.1",
     "vite": "^5.4.1"
-  }
+  },
+  "description": "Escolhemos este tema porque a marca é bem conhecida e todo mundo gosta. No nosso projeto, criamos uma página onde podemos cadastrar novos chocolates, cadastrar clientes, cadastrar pagamentos, gerenciar o estoque e criar novas promoções. Nosso cadastro de chocolates vai permitir adicionar novos chocolates, o cadastro de clientes vai registrar novos consumidores, e o cadastro de pagamentos vai gerenciar todas as formas de pagamento. A gestão de estoque ajuda a ver quais chocolates ainda estão disponíveis e adicionar novos quando precisar. E com a criação de promoções, a gente pode fazer e gerenciar descontos e ofertas especiais.",
+  "main": "eslint.config.js",
+  "author": "",
+  "license": "ISC"
 }

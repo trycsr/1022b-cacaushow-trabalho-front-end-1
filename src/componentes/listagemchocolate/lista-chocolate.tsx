@@ -12,13 +12,17 @@ export default function ListaChocolate() {
     
     const [chocolates, setChocolates] = useState<ChocolateType[]>([])
     useEffect(() => {
-        fetch("https://one022b-cacaushow-trabalho-1r6f.onrender.com/chocolates")
+        fetch("https://one022b-cacaushow-trabalho-ixsq.onrender.com/chocolates")
             .then(resposta => resposta.json())
             .then(dados => setChocolates(dados))
     }, []);
+
     return (
         <>
-         <Link to={"/cadastro-chocolate"}>Chocolates</Link>
+        <div className='container-link'>
+          <Link to={"/cadastro-chocolate"} className="link-bonitao">Chocolates</Link>
+          <Link to={"/alterar-chocolate"} className="link-bonitao">Alterar Chocolates</Link>
+          </div>
             {chocolates.map(choco => {
                 return (
                     <div key={choco.id} className='chocolate-item'>

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import {Link} from "react-router-dom"
+import { Link } from 'react-router-dom'
 
 type ClienteType = {
     clienteId:number,
@@ -10,21 +10,24 @@ export default function ListaCliente() {
     
     const [cliente, setCliente] = useState<ClienteType[]>([])
     useEffect(()=>{
-      fetch("https://one022b-cacaushow-trabalho-1r6f.onrender.com/cliente")
-      .then(resposta=>resposta.json())
-      .then(dados=>setCliente(dados))
-    },[])
+        fetch("https://one022b-cacaushow-trabalho-ixsq.onrender.com/cliente")
+        .then(resposta=>resposta.json())
+        .then(dados=>setCliente(dados))
+      },[])
     return (
         <>
-    <Link to={"/cadastro-cliente"}>Cadastrar Cliente</Link>
-      {cliente.map(clien=>{
-        return(
-          <div key={clien.clienteId}className='cliente-item'>
-            <h1>{clien.nome}</h1>
-            <p>{clien.cpf}</p>
-          </div>
-        )
-      })}
+         <div className='container-link'>
+         <Link to={"/cadastro-cliente"} className="link-bonitao">Clientes</Link>
+         <Link to={"/alterar-cliente"} className="link-bonitao">Alterar Clientes</Link>
+         </div>
+            {cliente.map(clien => {
+                return (
+                    <div key={clien.clienteId}className='cliente-item'>
+                    <h1>{clien.nome}</h1>
+                    <p>{clien.cpf}</p>
+                  </div>
+                )
+            })}
         </>
     )
 }

@@ -1,5 +1,5 @@
 import { FormEvent, useState, ChangeEvent } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function CadastroChocolate(){
     const navigate = useNavigate();
@@ -20,7 +20,7 @@ export default function CadastroChocolate(){
             imagem: imagem
         }
         console.log(chocolate)
-        fetch("https://one022b-cacaushow-trabalho-1r6f.onrender.com/chocolates",{
+        fetch("https://one022b-cacaushow-trabalho-ixsq.onrender.com/chocolates",{
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -54,6 +54,9 @@ export default function CadastroChocolate(){
 
     return(
         <>
+        <div className='container-link'>
+                <Link to={"/alterar-chocolate"} className="link-bonitao">Alterar Chocolate</Link>
+                </div>
             <h1>Cadastrar Chocolates</h1>
             <form onSubmit={handleForm}>
                 <div>

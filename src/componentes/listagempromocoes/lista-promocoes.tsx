@@ -5,20 +5,23 @@ type PromocoesType = {
     idpromocao:number,
     titulo:string,
     descricao:string,
-    validade:string,
+    validade:Date,
     cupom:string
   }
 export default function ListaPromocoes() {
     
     const [promocoes, setPromocoes] = useState<PromocoesType[]>([])
     useEffect(()=>{
-        fetch("https://one022b-cacaushow-trabalho-1r6f.onrender.com/promocoes")
+        fetch("https://one022b-cacaushow-trabalho-ixsq.onrender.com/promocoes")
         .then(resposta=>resposta.json())
         .then(dados=>setPromocoes(dados))
       },[])
     return (
         <>
-        <Link to={"/criacao-promocoes"}>Promoções</Link>
+          <div className='container-link'>
+         <Link to={"/criacao-promocoes"} className="link-bonitao">Promoções</Link>
+         <Link to={"/alterar-promocoes"} className="link-bonitao">Alterar Promoções</Link>
+         </div>
             {promocoes.map(promo => {
                 return (
                     <div key={promo.idpromocao}className='promocoes-item'>
